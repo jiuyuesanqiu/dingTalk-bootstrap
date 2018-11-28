@@ -1,0 +1,26 @@
+$blue:    #3296fa;
+$red:     #F25643;
+$yellow:  #fee151;
+$green:   #15BC83;
+$orange:  #FF943E;
+$link:#576A95;
+
+$theme-colors: (
+        "secondary-warning": $orange,
+        "link": $link
+);
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$grade:(
+  "first-headline":100%,
+  "sub-headline":72%,
+  "second-headline":56%,
+  "three-headline":40%,
+  "four-headline":28%
+);
+//渲染文字颜色
+@each $title, $value in $grade {
+  .text-#{$title} {
+    color: rgb(25,31,37,$value);
+  }
+}
